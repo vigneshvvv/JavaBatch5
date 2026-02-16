@@ -1,6 +1,15 @@
 package BasicPractice;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Set;
 
 public class SampleTestng {
 	
@@ -78,9 +87,98 @@ public class SampleTestng {
 		}
 		
 		
-		System.out.println(Arrays.toString(arr));		
+		System.out.println(Arrays.toString(arr));
 		
-
+		
+		UserDetails user = new UserDetails();
+		user.setSNo(1);
+		user.setName("vignesh");
+		user.setAge(25);
+		user.setLastName("kumar");
+		user.setWorkLocation("chennai");
+		user.setRole("SW");
+		System.out.println(user);
+		System.out.println(user.getName());
+		
+		UserDetails user2 = new UserDetails();
+		user2.setSNo(2);
+		user2.setName("fsadfsdfdsfsdfds");
+		user2.setAge(25);
+		user2.setLastName("sfdsfsfsdfsdf");
+		user2.setWorkLocation("chennai");
+		user2.setRole("SW");
+		System.out.println(user2);
+		
+		
+		List<Integer> listOfInt = new ArrayList<>();
+		listOfInt.add(10);
+		listOfInt.add(20);
+		listOfInt.add(1, 20);
+		
+		System.out.println(listOfInt);
+		System.out.println( listOfInt.get(0));
+		System.out.println( listOfInt.getFirst());
+		System.out.println( listOfInt.getLast());
+		System.out.println( listOfInt.size());
+		
+		
+		//Array list to contain list of data's either Integer, String or Object
+		List<UserDetails> userList = new ArrayList<>();
+		userList.add(user);
+		userList.add(user2);
+//		System.out.println(userList);
+		
+		
+		//set doesn't allow duplicates
+		Set<Integer> sampleSet = new HashSet<>();
+		sampleSet.add(10);
+		sampleSet.add(20);
+		sampleSet.add(10);
+		
+		System.out.println(sampleSet);
+		
+		
+		//Ascending Queue will always stores min element at the top
+		PriorityQueue<Integer>  queue = new PriorityQueue<>();
+		queue.add(5);
+		queue.add(1);
+		queue.add(3);
+		queue.add(4);
+		
+		System.out.println(queue.peek());
+		System.out.println(queue.poll());
+		System.out.println(queue.peek());
+		
+		
+		//Desc Queue to store the max element on the top always
+		PriorityQueue<Integer> reverseQueue = new PriorityQueue<>(Collections.reverseOrder());
+		reverseQueue.add(5);
+		reverseQueue.add(1);
+		reverseQueue.add(3);
+		reverseQueue.add(4);
+		
+		System.out.println(reverseQueue.peek());
+		System.out.println(reverseQueue.poll());
+		System.out.println(reverseQueue.peek());
+		
+		
+		//same as list but memory stored
+		LinkedList<Integer> linkedList = new LinkedList<>();
+		linkedList.add(10);
+		linkedList.add(20);
+		linkedList.add(30);
+		linkedList.add(8);
+		System.out.println(linkedList);
+		
+		
+		//to store key value pair 
+		Map<Integer, Integer> sampleMap = new HashMap<>();
+		sampleMap.put(1, 1000);
+		sampleMap.put(2, 2000);
+		sampleMap.put(3, 3000);
+		
+		System.out.println(sampleMap.get(3));
+		
 	}
 
 }
