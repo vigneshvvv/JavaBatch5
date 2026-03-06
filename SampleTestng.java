@@ -9,12 +9,16 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.Set;
+import java.util.Stack;
+import java.util.TreeSet;
 
 public class SampleTestng {
 	
 	public static void main(String[] arg) {
-		int a = 10;
+		
+		int a = 20;
 		int b = 20;
 		String name = "sfdfafd";
 		Boolean result = false;
@@ -28,9 +32,12 @@ public class SampleTestng {
 		
 		
 //		inserting value into array 
-		int[] arr1 = new int[5];
+		int[] arr1 = new int[5];		
 		arr1[0] = 10;
+		arr1[1] = 20;
 		System.out.println(arr1[0]);
+		System.out.println(arr1[1]);
+		System.out.println(Arrays.toString(arr1));
 		
 		int[] arr = new int[] {1,2,3,4,5,6};
 
@@ -179,6 +186,23 @@ public class SampleTestng {
 		
 		System.out.println(sampleMap.get(3));
 		
+		
+		Queue<Integer> sampleQueue = new PriorityQueue<Integer>();
+		sampleQueue.add(10);
+		sampleQueue.add(20);
+		System.out.println(sampleQueue.poll());
+		
+		
+		TreeSet<Integer> treeSet = new TreeSet<>();
+		treeSet.add(50);
+		treeSet.add(20);
+		treeSet.add(70);
+		System.out.println(treeSet);
+		
+		Stack<Integer> sampleStac = new Stack<>();
+		sampleStac.add(10);
+		sampleStac.add(20);
+		System.out.println(sampleStac.pop());
 	}
 
 }

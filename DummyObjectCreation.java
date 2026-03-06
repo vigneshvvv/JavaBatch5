@@ -30,6 +30,23 @@ public class DummyObjectCreation {
 		UsersList list = new UsersList();
 		list.setUsers(userlst);
 		System.out.println(list);
+		
+		ProductDetails details = new ProductDetails(1, "Laptop", "Electronics", 50000);
+		System.out.println(details);
+		
+		ProductDetails details2 = new ProductDetails();
+		details2.setId(2);	
+		details2.setProductName("mobile");
+		details2.setDesc("dsfsdfdfs");
+		details2.setPrice(30000);
+		System.out.println(details2);
+
+		ProductDetails details3 = new ProductDetails(3, "zsdcdas", 20000);
+		System.out.println(details3);
+		
+		
 	}
+	
+	
 
 }
